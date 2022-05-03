@@ -1,4 +1,4 @@
-const mongoose = require('./db.js');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -47,13 +47,15 @@ const userSchema = new Schema({
                 pin: { type: String, require: true, trim: true },
             }],
 
-})
+
+
 is_active:
-{
+{   
     type: Boolean,
     default:true,
-    require: true
+    require: true,
 }
+})
 
 let User = mongoose.model('user', userSchema);
 
