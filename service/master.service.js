@@ -17,6 +17,23 @@ class MasterService {
 
 
     }
+
+    addRoles = async (name) => {
+        let data = {
+            name: name
+        }
+        let resData = await masterRepo.addRoles(data);
+        if (resData) return Promise.resolve({
+            success: true,
+            messageKey: "register"
+        })
+        else return Promise.reject({
+            success: false,
+            messageKey: "error"
+        })
+
+
+    }
 }
 
 module.exports = {
