@@ -10,7 +10,6 @@ const userSchema = new Schema({
     },
     lname: {
         type: String,
-        require: true,
         lowercase: true,
         trim: true
     },
@@ -22,16 +21,23 @@ const userSchema = new Schema({
         email: true,
         trim: true
     },
-    phone:
-    {
-        type: String,
-        required: true,
-        unique: true,
-        Number: true,
-        max: 10,
-        trim: true
+
+    mobile: {
+
+        number: { type: String, trim: true, required: false },
+
+        internationalNumber: { type: String, trim: true, required: false },
+
+        nationalNumber: { type: String, trim: true, required: false },
+
+        e164Number: { type: String, trim: true, required: false },
+
+        countryCode: { type: String, trim: true, required: false },
+
+        dialCode: { type: String, trim: true, required: false }
 
     },
+
     address:
         [
             {
@@ -42,7 +48,13 @@ const userSchema = new Schema({
             }],
 
 })
+is_active:
+{
+    type: Boolean,
+    default:true,
+    require: true
+}
 
-let User = mongoose.model('User', userSchema);
+let User = mongoose.model('user', userSchema);
 
 module.exports = User;
