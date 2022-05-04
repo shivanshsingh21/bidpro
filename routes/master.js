@@ -4,8 +4,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.post('/addCategory',masterController.addCategory);
-router.post('/addRole',masterController.addRoles);
-
 
 router.post('/addRole',masterController.addRoles);
 
