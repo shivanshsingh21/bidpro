@@ -7,5 +7,9 @@ const roleSchema = new Schema({
         unique: true,
         trim: true,
     },
+    is_active: {
+        type: Boolean,
+        default: true
+    }
 }, { timestamps: true, });
 module.exports = mongoose.model('role', roleSchema);

@@ -11,6 +11,16 @@ class MasterRepo {
         return RolesSchema.create(data)
         
     }
+
+    getRoles = async(cond)=>{
+        return RolesSchema.find(cond)
+        
+    }
+
+    getCategory = async(cond)=>{
+        return RolesSchema.find(cond)
+        
+    }
 }
 
 module.exports={
