@@ -12,10 +12,31 @@ class MasterController extends BaseController {
             this.renderError(req,res,err)
         }
     }
-    addRoles= async (req, res, next) => {
+
+    addRoles = async (req, res, next) => {
         try {
             let { name } = req.body;
             let serData = await masterService.addRoles(name);
+            this.renderJSON(req,res,serData)
+        }
+        catch (err) {
+            this.renderError(req,res,err)
+        }
+    }
+
+    getRoles = async (req, res, next) => {
+        try {
+            let serData = await masterService.getRoles();
+            this.renderJSON(req,res,serData)
+        }
+        catch (err) {
+            this.renderError(req,res,err)
+        }
+    }
+
+    getCategory = async (req, res, next) => {
+        try {
+            let serData = await masterService.getCategory();
             this.renderJSON(req,res,serData)
         }
         catch (err) {
