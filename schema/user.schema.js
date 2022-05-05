@@ -23,17 +23,17 @@ const userSchema = new Schema({
   },
 
   mobile: {
-    number: { type: String, trim: true, required: false },
+    number: { type: String, trim: true, required: true },
 
-    internationalNumber: { type: String, trim: true, required: false },
+    internationalNumber: { type: String, trim: true, required: true },
 
-    nationalNumber: { type: String, trim: true, required: false },
+    nationalNumber: { type: String, trim: true, required: true },
 
-    e164Number: { type: String, trim: true, required: false },
+    e164Number: { type: String, trim: true, required: true },
 
-    countryCode: { type: String, trim: true, required: false },
+    countryCode: { type: String, trim: true, required: true },
 
-    dialCode: { type: String, trim: true, required: false },
+    dialCode: { type: String, trim: true, required: true },
   },
   category_id: [
     {

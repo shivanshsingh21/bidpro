@@ -1,9 +1,14 @@
 var express = require('express');
-var router = express.Router();
 
+const {userController} = require('../controller/user.controller');
+var router = express.Router();
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+router.post('/register',userController.register);
+// router.post('/login', checkNotAuthenticated,userController.loginUSER);
+// router.post('/passwordreset', userController.passwordReset);
+
+// This token is different from JWT
+// router.get('/reset/:token',userController.passwordResetGet);
 
 module.exports = router;
