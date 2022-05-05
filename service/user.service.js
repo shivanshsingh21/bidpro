@@ -1,19 +1,12 @@
 const { userRepo } = require("../repo/user.repo");
+var nodemailer=require('nodemailer');
 class UserService {
-    addUser= async (f_name,l_name,email,mobile,category,role,address) => {
-        let data = {
-            f_name: f_name,
-            l_name:l_name,
-            email:email,
-            mobile:mobile,
-            category:category,
-            role:role,
-            address:address,
-        }
+    addUser= async (data) => {
         let resData = await userRepo.addUser(data);
         if (resData) return Promise.resolve({
             success: true,
             messageKey: "register"
+            
         })
         else return Promise.reject({
             success: false,
