@@ -29,11 +29,12 @@ const userSchema = new Schema({
 
     nationalNumber: { type: String, trim: true, required: true },
 
-    e164Number: { type: String, trim: true, required: true },
+    
 
     countryCode: { type: String, trim: true, required: true },
 
     dialCode: { type: String, trim: true, required: true },
+    e164Number: { type: String, trim: true, required: true },
   },
   category_id: [
     {
