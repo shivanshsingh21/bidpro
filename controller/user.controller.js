@@ -5,7 +5,7 @@ class UserController extends BaseController {
 
      register = async (req, res, next) => {
         try {
-            let { f_name,l_name,email,mobile,category_id,roles_id,address } = req.body;
+            let { f_name,l_name,email,mobile,category_id,roles_id,address,password } = req.body;
             let data = {
                 f_name: f_name,
                 l_name:l_name,
@@ -14,6 +14,7 @@ class UserController extends BaseController {
                 category_id:category_id,
                 roles_id:roles_id,
                 address:address,
+                password:password,
             }
             let userData = await userService.addUser(data);
             this.renderJSON(req,res,userData)
@@ -22,6 +23,9 @@ class UserController extends BaseController {
             this.renderError(req,res,err)
         }
     }
+    
+
+    
 };
 
 

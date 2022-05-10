@@ -2,32 +2,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserCredSchema = new Schema({
+
+    user_id: 
+        {
+          type: Schema.Types.ObjectId,
+          ref: "users",
+          require: true,
+        },
     password:
     {
         type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
+        require: true
     },
     reset_link:
     {
-        type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
+        type: String
+    
     },
     activation_link:
     {
         type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
     }
 })
 
