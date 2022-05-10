@@ -24,7 +24,20 @@ class UserController extends BaseController {
         }
     }
     
-
+    login = async(req, res)=>{
+        try {
+            let {email,password } = req.body;
+            let data = {
+                email:email,
+                password:password,
+            }
+            let userData = await userService.login(data);
+            this.renderJSON(req,res,userData)
+        }
+        catch (err) {
+            this.renderError(req,res,err)
+        }
+    };
     
 };
 

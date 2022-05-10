@@ -7,7 +7,7 @@ var router = express.Router();
 router.post('/register',userController.register);
 // router.post('/login', checkNotAuthenticated,userController.loginUSER);
 // router.post('/passwordreset', userController.passwordReset);
-
+router.post('/login',userController.login);
 // This token is different from JWT
 // router.get('/reset/:token',userController.passwordResetGet);
 
