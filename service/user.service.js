@@ -1,18 +1,22 @@
 const { userRepo } = require("../repo/user.repo");
 const bcrypt = require("bcrypt");
-const auth = require('../middleware/auth');
-const { promise } = require("bcrypt/promises");
+const {generateAccesstoken} = require('../middleware/auth');
 
 class UserService {
   login = async (data) => {
     let userCond = { email: data.email, is_active: true };
     let user = await userRepo.findUser(userCond);
-    console.log(user);
+    let passcond={
+      user_id:user._id
+    }
+    let pswrd = await userRepo.findUserCred(passcond);
     if (user == null) {
       return res.status(400).send("Cannot find user email");
     } else {
-      if (await bcrypt.compare(data.password, user.password)) {
-        const accessToken = auth.generateAccesstoken({
+     console.log(user);
+      if (await bcrypt.compare(data.password, pswrd.password)) {
+        console.log(user)
+        const accessToken = await generateAccesstoken({
           _id:user._id,
           role_id:user.role_id
         })

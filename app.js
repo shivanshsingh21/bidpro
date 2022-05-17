@@ -10,12 +10,13 @@ const mongoose = require('mongoose')
 
 const url = `mongodb+srv://bidpro:KH91f8HE7HN3CB6p@cluster0.dvodt.mongodb.net/test`;
 
-mongoose.connect(url)
+mongoose.connect(url,{autoIndex:true})
     .then(() => {
         console.log('Connected to the database ')
     })
     .catch((err) => {
-        console.error(`Error connecting to the database. n${err}`);
+        console.log(err)
+        process.exit();
     })
 
 app.use(logger('dev'));
