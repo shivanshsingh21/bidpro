@@ -63,6 +63,7 @@ addUserCred = async (data) => {
       success: false,
       messageKey: "error",
     });
+}
 };
 }
 module.exports = {
