@@ -8,11 +8,19 @@ const bidSchema = new Schema({
         ref: "users",
         require: true,
       },
-      item_id: {
+      item_id:[ {
         type: Schema.Types.ObjectId,
         ref: "items",
         require: true,
-      },
+      }],
+      category_id: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "categories",
+          require: true,
+        },
+      ],
+
       bid_finish_date:
       {
         type: Date, 

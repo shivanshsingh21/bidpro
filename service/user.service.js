@@ -65,7 +65,7 @@ addUserCred = async (data) => {
     });
 }
 };
-}
+
 module.exports = {
   userService: new UserService(),
 };
