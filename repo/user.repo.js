@@ -7,6 +7,11 @@ class UserRepo {
         
     }
 
+    findUserCred = async(query)=>{
+        return UserCredSchema.findOne(query)
+        
+    }
+
     addUser = async(data)=>{
         return UserSchema.create(data)
         
