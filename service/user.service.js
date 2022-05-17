@@ -1,5 +1,7 @@
 const { userRepo } = require("../repo/user.repo");
 const bcrypt = require("bcrypt");
+const auth = require('../middleware/auth');
+const { promise } = require("bcrypt/promises");
 
 class UserService {
   login = async (data) => {
@@ -10,9 +12,19 @@ class UserService {
       return res.status(400).send("Cannot find user email");
     } else {
       if (await bcrypt.compare(data.password, user.password)) {
-        res.send("Success");
+        const accessToken = auth.generateAccesstoken({
+          _id:user._id,
+          role_id:user.role_id
+        })
+        return Promise.resolve({ 
+          data: accessToken,
+          success: true
+        });
       } else {
-        res.send("Not Allowed");
+        return Promise.reject({
+          success: false,
+          messageKey: "Not Allowed",
+        });
       }
     }
   }
@@ -53,6 +65,7 @@ addUserCred = async (data) => {
     });
 }
 };
+}
 module.exports = {
   userService: new UserService(),
 };

@@ -23,7 +23,7 @@ class UserController extends BaseController {
             this.renderError(req,res,err)
         }
     }
-    
+
     login = async(req, res)=>{
         try {
             let {email,password } = req.body;
@@ -37,7 +37,7 @@ class UserController extends BaseController {
         catch (err) {
             this.renderError(req,res,err)
         }
-    };
+    }
     
 };
 
