@@ -18,7 +18,7 @@ class MasterRepo {
     }
 
     getCategory = async(cond)=>{
-        return RolesSchema.find(cond)
+        return CategorySchema.find(cond)
         
     }
 }

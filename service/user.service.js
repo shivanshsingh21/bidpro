@@ -15,8 +15,8 @@ class UserService {
         res.send("Not Allowed");
       }
     }
-  };
-}
+  }
+
 
 addUser = async (data) => {
   let resData = await userRepo.addUser(data);
@@ -51,6 +51,7 @@ addUserCred = async (data) => {
       success: false,
       messageKey: "error",
     });
+}
 };
 module.exports = {
   userService: new UserService(),
