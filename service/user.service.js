@@ -7,6 +7,7 @@ class UserService {
     let userCond = { email: data.email, is_active: true };
     let user = await userRepo.findUser(userCond);
     let passcond={
+      roles_id:user.roles_id,
       user_id:user._id
     }
     let pswrd = await userRepo.findUserCred(passcond);
@@ -18,7 +19,7 @@ class UserService {
         console.log(user)
         const accessToken = await generateAccesstoken({
           _id:user._id,
-          role_id:user.role_id
+          roles_id:user.roles_id
         })
         return Promise.resolve({ 
           data: accessToken,

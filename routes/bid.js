@@ -1,11 +1,10 @@
 var express = require("express");
-const { itemController } = require("../controller/item.controler");
-
+const { bidController } = require("../controller/bid.controller");
 const { verifyUser } = require("../middleware/auth");
 var router = express.Router();
 
 /* GET users listing. */
 
-router.post("/item", verifyUser, itemController.item);
+router.post("/bid", verifyUser, bidController.bid);
 
 module.exports = router;
