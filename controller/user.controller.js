@@ -38,7 +38,6 @@ class UserController extends BaseController {
             this.renderError(req,res,err)
         }
     }
-    
 };
 
 

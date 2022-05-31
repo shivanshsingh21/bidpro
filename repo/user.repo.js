@@ -1,28 +1,25 @@
 const UserSchema = require("../schema/user.schema");
 const UserCredSchema = require("../schema/user.credentials");
 class UserRepo {
+  findUser = async (query) => {
+    return UserSchema.findOne(query);
+  };
 
-    findUser = async(query)=>{
-        return UserSchema.findOne(query)
-        
-    }
+  findUserCred = async (query) => {
+    return UserCredSchema.findOne(query);
+  };
 
-    findUserCred = async(query)=>{
-        return UserCredSchema.findOne(query)
-        
-    }
+  addUser = async (data) => {
+    let userData = new UserSchema(Object.assign({}, data));
+    return userData.save();
+  };
 
-    addUser = async(data)=>{
-        return UserSchema.create(data)
-        
-    }
-
-    addUserCred = async(data)=>{
-        return UserCredSchema.create(data)
-        
-    }
+  addUserCred = async (data) => {
+    let userData = new UserCredSchema(Object.assign({}, data));
+    return userData.save();
+  };
 }
 
-module.exports={
-    userRepo : new UserRepo()
-}
+module.exports = {
+  userRepo: new UserRepo(),
+};

@@ -17,22 +17,14 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    lowercase: true,
     email: true,
-    trim: true,
   },
 
   mobile: {
     number: { type: String, trim: true, required: true },
-
     internationalNumber: { type: String, trim: true, required: true },
-
     nationalNumber: { type: String, trim: true, required: true },
-
-    
-
     countryCode: { type: String, trim: true, required: true },
-
     dialCode: { type: String, trim: true, required: true },
     e164Number: { type: String, trim: true, required: true },
   },
