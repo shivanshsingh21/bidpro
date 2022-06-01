@@ -6,5 +6,5 @@ export const HomeWrapper = styled.div`
 `;
 
 export const ButtonWrapper=styled(PrimaryButton)`
-    background-color: black;
+    background-color: #d37528;
 `;
