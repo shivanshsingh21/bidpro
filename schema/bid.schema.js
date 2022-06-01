@@ -32,6 +32,6 @@ const bidSchema = new Schema({
   },
 });
 
-let items = mongoose.model("bid", bidSchema);
+let bids = mongoose.model("bid", bidSchema);
 
 module.exports = bids;

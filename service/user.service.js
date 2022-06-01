@@ -10,17 +10,10 @@ class UserService {
   login = async (data) => {
     let userCond = { email: data.email, is_active: true };
     let user = await userRepo.findUser(userCond);
-<<<<<<< HEAD
     let passcond = {
       user_id: user._id,
       roles_id: user.roles_id,
     };
-=======
-    let passcond={
-      roles_id:user.roles_id,
-      user_id:user._id
-    }
->>>>>>> f007283bfa8835c01de3a0eaebea199227f9b91e
     let pswrd = await userRepo.findUserCred(passcond);
     if (user == null) {
       return res.status(400).send("Cannot find user email");
@@ -29,17 +22,10 @@ class UserService {
       if (await bcrypt.compare(data.password, pswrd.password)) {
         console.log(user);
         const accessToken = await generateAccesstoken({
-<<<<<<< HEAD
           _id: user._id,
           roles_id: user.roles_id,
         });
         return Promise.resolve({
-=======
-          _id:user._id,
-          roles_id:user.roles_id
-        })
-        return Promise.resolve({ 
->>>>>>> f007283bfa8835c01de3a0eaebea199227f9b91e
           data: accessToken,
           success: true,
         });
