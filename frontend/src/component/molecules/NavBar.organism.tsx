@@ -8,7 +8,7 @@ import {
   InnerNavBarRight,
   PrimaryNavBar,
 } from "./NavBarr.styles";
-import Logo from "./download.png";
+import Logo from "./download2.png";
 import { useHref } from "react-router-dom";
 function NavBar() {
   return (

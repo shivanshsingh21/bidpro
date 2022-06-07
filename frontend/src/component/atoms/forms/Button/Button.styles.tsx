@@ -18,5 +18,6 @@ export const PrimaryButton = styled.button`
     color: #fff;
     background-color: #e28236;
     border-color: #e28236;
+    box-shadow:2px 3px 10px black;  
   }
 `;
