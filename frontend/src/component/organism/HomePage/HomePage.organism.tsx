@@ -20,6 +20,7 @@ function HomePage() {
       <NavBar></NavBar>
       <MenuBar></MenuBar>
       <MainBar></MainBar>
+      <Footer></Footer>
 
     </HomeWrapper>
   );
