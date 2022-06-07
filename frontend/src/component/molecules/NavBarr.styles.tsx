@@ -8,8 +8,9 @@ export const InnerNavBar = styled.div`
 `;
 export const InnerNavBarRight = styled.div`
 img{
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 130px;
+    padding: 7px 7px 4px 15px;
 }
 `;
 export const InnerNavBarLeft= styled.div`
