@@ -1,36 +1,24 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const UserCredSchema = new Schema({
-    password:
-    {
-        type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
-    },
-    reset_link:
-    {
-        type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
-    },
-    activation_link:
-    {
-        type: String,
-        unique: true,
-        require: true,
-        min: 8,
-        max: 50,
-        trim: true
-    }
-})
+  user_id: {
+    type: Schema.Types.ObjectId,
+    ref: "users",
+    require: true,
+  },
+  password: {
+    type: String,
+    require: true,
+  },
+  reset_link: {
+    type: String,
+  },
+  activation_link: {
+    type: String,
+  },
+});
 
-    let User = mongoose.model('UsersCred', UserCredSchema);
+let User = mongoose.model("cred", UserCredSchema);
 
 module.exports = User;
