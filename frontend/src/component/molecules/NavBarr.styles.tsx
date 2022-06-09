@@ -4,7 +4,7 @@ export const PrimaryNavBar = styled.div``;
 export const InnerNavBar = styled.div`
   display: flex;
   justify-content:space-between;
-  background-color: black;
+  background-color: #201f1f;
 `;
 export const InnerNavBarRight = styled.div`
 img{
@@ -19,6 +19,6 @@ display: flex;
 export const InnerNavBarLeftDiv= styled.div`
 display: flex;
 justify-content: space-between;
-margin: 20px 15px;
-color: white;
+margin: 27px 15px;
+color: #9e9393;
 `;

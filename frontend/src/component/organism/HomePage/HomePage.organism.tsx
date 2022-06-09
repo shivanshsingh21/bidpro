@@ -9,8 +9,9 @@ import NavBar from "../../molecules/NavBar.organism";
 import MenuBar from "../../molecules/Menubar.organism";
 import MainBar from "../../molecules/MainBar.organism";
 import { HomeWrapper } from "./HomePage.styles";
-import RegistrationForm from"../../molecules/Registration/Registration.organism";
 
+
+import LoginForm from "../../molecules/LoginForm/LoginForm.organism"
 
 function HomePage() {
   return (
@@ -22,7 +23,8 @@ function HomePage() {
       <MenuBar></MenuBar>
       <MainBar></MainBar>
       <Footer></Footer>
-      <RegistrationForm></RegistrationForm>
+   
+      
     </HomeWrapper>
   );
 }

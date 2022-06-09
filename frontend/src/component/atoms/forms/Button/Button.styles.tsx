@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const PrimaryButton = styled.button`
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 150;
+    font-size: 15px;
     color: #ffffff;
     display: inline-block;
     line-height: 1.35;
-    padding: 10px 30px;
+    padding: 6px 5px;
     vertical-align: bottom;
     border-radius: 5px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 150;
     background-color: #e28236;
     border-color: #ff9948;
   
