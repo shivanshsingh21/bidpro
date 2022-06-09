@@ -16,6 +16,7 @@ export const CheckBoxWrapper=styled(CheckBox)`
 `;
 export const TextboxWrapper=styled(PrimaryTextbox)`
     background-color: black;
+    margin-top: 80px;
 `;
 
 

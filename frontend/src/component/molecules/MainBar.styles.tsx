@@ -1,28 +1,27 @@
 import styled from "styled-components";
 
 export const PrimaryMainBar = styled.div``;
+
 export const InnerMainBar = styled.div`
   display: flex;
-  justify-content:space-between;
-  background-color:#442233;
+  justify-content: space-between;
+  background-color: #67a4dd;
 `;
 export const InnerMainBarRight = styled.div`
-img{
-    height: 450px;
-    width: 400px;
-    padding: 4px 20px 30px 90px;
-}
+  img {
+    height: 550px;
+    width: 550px;
+    padding: 0px 20px 0px 112px;
+  }
 `;
-export const InnerMainBarLeft= styled.div`
-display: flex;
-
+export const InnerMainBarLeft = styled.div`
+  display: flex;
 `;
-export const InnerMainBarLeftDiv= styled.div`
-display: flex;
-justify-content: space-between;
-padding: 20px;
+export const InnerMainBarLeftDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 
-
-margin: 20px 15px;
-color: black;
+  margin: 20px 15px;
+  color: black;
 `;

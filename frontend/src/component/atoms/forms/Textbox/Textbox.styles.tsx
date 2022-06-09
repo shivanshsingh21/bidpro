@@ -13,7 +13,7 @@ export const PrimaryTextbox = styled.text`
    &:hover {
     color: black;
     border-color:white;
-  box-shadow:2px 3px 2px black;  
+  box-shadow:1px 1px 1px black;  
   }
    
 `;
