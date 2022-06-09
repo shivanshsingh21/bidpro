@@ -10,4 +10,11 @@ color: #585858;
   width:200px;
   padding: 10px;
  }
+ .main3
+   {
+  text-align: center;
+  font-size: 15px;
+  color:red;
+}
+ 
 `;

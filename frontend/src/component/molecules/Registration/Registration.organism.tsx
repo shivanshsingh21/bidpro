@@ -31,8 +31,16 @@ function RegistrationForm() {
       >
         <Form>
           <table>
-            <tr><td colSpan={2} className="main2">FREE SIGN UP</td></tr>
-            <tr><td colSpan={2}className="main3">Sign-up takes less than 30 seconds.</td></tr>
+            <tr>
+              <td colSpan={2} className="main2">
+                FREE SIGN UP
+              </td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="main3">
+                Sign-up takes less than 30 seconds.
+              </td>
+            </tr>
             <tr>
               <td>
                 <label>First Name:</label>
@@ -40,43 +48,46 @@ function RegistrationForm() {
               </td>
               <td>
                 <label>Last Name:</label>
-                <Field name="lname" class="main"type="text" />
+                <Field name="lname" class="main" type="text" />
               </td>
             </tr>
             <tr>
               <td>
                 <label>Email:</label>
-                <Field name="email" class="main"type="email" />
+                <Field name="email" class="main" type="email" />
               </td>
               <td>
                 <label>Mobile No.:</label>
-                <Field name="mobile_no" class="main"type="text" />
+                <Field name="mobile_no" class="main" type="text" />
               </td>
             </tr>
             <tr>
               <td>
                 <label>House no:</label>
-                <Field name="houseno" class="main"type="text" />
+                <Field name="houseno" class="main" type="text" />
               </td>
               <td>
                 <label>Street:</label>
-                <Field name="street" class="main"type="text" />
+                <Field name="street" class="main" type="text" />
               </td>
             </tr>
             <tr>
               <td>
                 <label>City:</label>
-                <Field name="city" class="main"type="text" />
+                <Field name="city" class="main" type="text" />
               </td>
               <td>
                 <label>PinCode:</label>
-                <Field name="Pin"class="main" type="text" />
+                <Field name="Pin" class="main" type="text" />
               </td>
             </tr>
             <tr>
               <td>
                 <label>Password:</label>
-                <Field name="password" class="main"type="password" />
+                <Field name="password" class="main" type="password" /></td></tr><tr>
+                <td colSpan={2} className="main4" >
+                <Field class="main4"name="checked"  type="checkbox" />
+                I accept the Terms and Conditions and the Privacy Policy of BidBid.com
               </td>
             </tr>
             <br></br>

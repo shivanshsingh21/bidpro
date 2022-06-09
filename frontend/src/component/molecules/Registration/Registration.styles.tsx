@@ -22,7 +22,10 @@ export const PrimaryRegistrationForm = styled.div`
   text-align: center;
   font-size: 20px;
 }
-  
+ .main4
+ {
+   font-size: 15px;
+ } 
   
  .main 
  {
