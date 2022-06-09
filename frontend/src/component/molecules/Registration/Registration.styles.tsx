@@ -11,7 +11,18 @@ export const PrimaryRegistrationForm = styled.div`
   color:white;
   font-size: 1.1em;
   line-height: 1.5;
-  padding: 10px;
+  padding: 5px;
+  .main2
+   {
+  text-align: center;
+  font-size: 30px;
+}
+.main3
+   {
+  text-align: center;
+  font-size: 20px;
+}
+  
   
  .main 
  {

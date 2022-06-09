@@ -31,8 +31,8 @@ function RegistrationForm() {
       >
         <Form>
           <table>
-            <tr><td colSpan={2}><h1>FREE SIGN UP</h1></td></tr>
-            <tr><td colSpan={2}>Sign-up takes less than 30 seconds.</td></tr>
+            <tr><td colSpan={2} className="main2">FREE SIGN UP</td></tr>
+            <tr><td colSpan={2}className="main3">Sign-up takes less than 30 seconds.</td></tr>
             <tr>
               <td>
                 <label>First Name:</label>
