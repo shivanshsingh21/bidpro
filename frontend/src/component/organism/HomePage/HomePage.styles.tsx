@@ -5,7 +5,7 @@ import CheckBox from '../../atoms/forms/CheckBox/CheckBox.atom';
 
 
 export const HomeWrapper = styled.div`
-    display:'flex';
+ 
 `;
 
 export const ButtonWrapper=styled(PrimaryButton)`

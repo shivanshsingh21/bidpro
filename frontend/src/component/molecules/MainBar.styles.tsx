@@ -8,21 +8,18 @@ export const InnerMainBar = styled.div`
 `;
 export const InnerMainBarRight = styled.div`
 img{
-    height: 450px;
-    width: 400px;
-    padding: 4px 20px 30px 90px;
+    height: 490px;
+    width: 450px;
+    padding: 4px 0px 0px 90px;
 }
 `;
 export const InnerMainBarLeft= styled.div`
 display: flex;
-
+justify-content: space-between;
 `;
 export const InnerMainBarLeftDiv= styled.div`
 display: flex;
-justify-content: space-between;
-padding: 20px;
 
-
-margin: 20px 15px;
-color: black;
+padding: 50px;
+ color: black;
 `;

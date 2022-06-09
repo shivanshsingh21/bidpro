@@ -22,10 +22,9 @@ function MainBar() {
         </InnerMainBarRight>
         <InnerMainBarLeft>
 
-            <InnerMainBarLeftDiv><HomeWrapper><TextBox value=''></TextBox></HomeWrapper>
-         
-        </InnerMainBarLeftDiv>
+        
         </InnerMainBarLeft>
+       
       </InnerMainBar>
     </PrimaryMainBar>
   );

@@ -15,14 +15,16 @@ img{
 `;
 export const InnerMenuBarLeft= styled.div`
 display: flex;
-padding: 10px 10px 10px 10px;
+padding: 50px;
+justify-content: space-between;
+align-items:center;
 `;
 export const InnerMenuBarLeftDiv= styled.div`
 display: flex;
 justify-content: space-between;
-padding: 60px 10px 10px 10px;
 
 
-margin: 20px 15px;
+
+
 color: black;
 `;

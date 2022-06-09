@@ -21,18 +21,10 @@ function MenuBar() {
           <img src={Logo} alt={Logo}></img>
         </InnerMenuBarRight>
         <InnerMenuBarLeft>
-       
-            <InnerMenuBarLeftDiv>
-            <HomeWrapper><TextBox value= ""></TextBox></HomeWrapper>
-            
-        </InnerMenuBarLeftDiv> <InnerMenuBarLeftDiv></InnerMenuBarLeftDiv>
-        <InnerMenuBarLeftDiv><HomeWrapper><TextBox value=""></TextBox></HomeWrapper>
-        </InnerMenuBarLeftDiv>
-        <InnerMenuBarLeftDiv><HomeWrapper><Button text='Login'></Button></HomeWrapper>
-        
-        </InnerMenuBarLeftDiv>
-  
-        </InnerMenuBarLeft>
+          <TextBox value="E-MAIL"></TextBox>
+          <TextBox value="PASSWORD"></TextBox>
+          <Button text="Login"></Button>
+         </InnerMenuBarLeft>
       </InnerMenuBar>
     </PrimaryMenuBar>
   );
