@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PrimaryRegistrationForm = styled.div`
   width: 5%;
-  border: 2px solid black;
+  border: 1px solid grey;
   border-radius:5px;
   display: table;
   background-color: rgb(0,0,0); /* Fallback color */
@@ -12,5 +12,12 @@ export const PrimaryRegistrationForm = styled.div`
   font-size: 1.1em;
   line-height: 1.5;
   padding: 10px;
- 
+  
+ .main 
+ {
+    border: 1px solid grey;
+  border-radius:5px;
+  width:250px;
+  padding: 10px;
+ }
 `;

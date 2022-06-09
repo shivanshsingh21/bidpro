@@ -16,6 +16,8 @@ img{
 export const InnerMenuBarLeft= styled.div`
 display: flex;
 padding: 15px 10px 10px 10px;
+margin-top:20px;
+margin-right:100px;
 `;
 export const InnerMenuBarLeftDiv= styled.div`
 display: flex;
