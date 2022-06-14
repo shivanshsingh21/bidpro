@@ -21,4 +21,5 @@ export const InnerMainBarLeft = styled.div`
   margin-top:20px;
   margin-left:30px;
   margin-bottom:50px;
+  
 `;
