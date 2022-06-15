@@ -145,12 +145,10 @@ function RegistrationForm() {
               </tr>
               <tr>
                 <td>
-                <td>
                 <label>Category:</label>
                 <div className="app">
                   <Select defaultValue={selectedOption} options={options} />
                 </div>
-              </td>
                   <label>Password:</label>
                   <Field name="password" class="main" type="password" />
                   {errors.password && touched.password ? (
