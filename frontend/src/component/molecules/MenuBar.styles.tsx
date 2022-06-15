@@ -5,7 +5,6 @@ export const InnerMenuBar = styled.div`
   display: flex;
   justify-content:space-between;
   background-color: white;
-  padding-top: 70px;
 `;
 export const InnerMenuBarRight = styled.div`
 img{
