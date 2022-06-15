@@ -1,8 +1,15 @@
-import React from "react";
 import { PrimaryRegistrationForm } from "./Registration.styles";
 import { Formik, Form, Field } from "formik";
 import { PrimaryButton } from "../../atoms/forms/Button/Button.styles";
+import React, { useState } from "react";
+import Select from "react-select";
+
+const options = [
+  { value: "Bidder", label: "Bidder" },
+  { value: "Buyer", label: "Buyer" },
+];
 function RegistrationForm() {
+  const [selectedOption, setSelectedOption] = useState(null);
   return (
     <PrimaryRegistrationForm>
       <Formik
@@ -57,7 +64,7 @@ function RegistrationForm() {
                 <Field name="email" class="main" type="email" />
               </td>
               <td>
-                <label>Mobile No.:</label>
+                <label>Mobile No:</label>
                 <Field name="mobile_no" class="main" type="text" />
               </td>
             </tr>
@@ -83,13 +90,23 @@ function RegistrationForm() {
             </tr>
             <tr>
               <td>
+                <label>Category:</label>
+                <div className="app">
+                  <Select defaultValue={selectedOption} options={options} />
+                </div>
+              </td>
+              <td>
                 <label>Password:</label>
-                <Field name="password" class="main" type="password" /></td></tr><tr>
-                <td colSpan={2} className="main4" >
-                <Field class="main4"name="checked"  type="checkbox" />
-                I accept the Terms and Conditions and the Privacy Policy of BidBid.com
+                <Field name="password" class="main" type="password" />
               </td>
             </tr>
+            <tr>
+              <td colSpan={2} className="main4">
+                <Field class="main4" name="checked" type="checkbox" />I accept
+                the Terms and Conditions and the Privacy Policy of BidBid.com
+              </td>
+            </tr>
+
             <br></br>
             <PrimaryButton type="submit">Register</PrimaryButton>
           </table>

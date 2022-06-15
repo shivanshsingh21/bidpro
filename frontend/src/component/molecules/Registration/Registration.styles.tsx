@@ -34,4 +34,8 @@ export const PrimaryRegistrationForm = styled.div`
   width:250px;
   padding: 10px;
  }
+ .app
+ {
+  color: black;
+ }
 `;
